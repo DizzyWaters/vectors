@@ -145,26 +145,37 @@ int main()
 	std::cout << "Action ??? \n 1.Add \n 2.Substract" << std::endl;
 	std::cin >> acction;
 	std::cout << "acction char = " << (int)acction << std::endl;
-	switch (acction) 
+	
+
+	std::cout << "Input value: "; // here
+	std::cin >> b;
+	
+	std::cout << std::endl;
+	std::cout << "Value B is: " << b << std::endl;
+	// CONTROLS
+
+
+	switch (acction)
 	{
 	case(49):
-		{
+	{
 		std::cout << "addition ON" << std::endl;
+		c = a + b;
 		break;
-		}
+	}
 	case(50):
 	{
 		std::cout << "Substraction ON" << std::endl;
+		c = a - b;
 		break;
 	}
 	default:
 		std::cout << "wrong key" << std::endl;
 	}
 
-	std::cout << "Input value: "; // here
-	std::cin >> b;
+	std::cout << "Result is: " << c << std::endl;
 
-
+	// END CONTROLS
 
 
 	return 0;
