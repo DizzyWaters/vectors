@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <conio.h>
 
 // ----------------------------------------------------------------------
 // in
@@ -136,12 +137,32 @@ int main()
 
 	int a = 0,
 		b = 0, c = 0;
-
+	char acction = 'A';
 
 	std::cout << "CALCULATOR!!!" << std::endl;
-	std::cout << "Input value: ";
+	std::cout << "Input value: "; // here
 	std::cin >> a;
-
+	std::cout << "Action ??? \n 1.Add \n 2.Substract" << std::endl;
+	std::cin >> acction;
+	std::cout << "acction char = " << acction << std::endl;
+	switch (acction) 
+	{
+	case(31):
+		{
+		std::cout << "addition ON" << std::endl;
+		break;
+		}
+	case(32):
+	{
+		std::cout << "Substraction ON" << std::endl;
+		break;
+	}
+	default:
+		std::cout << "wrong key" << std::endl;
+	}
+	system("cls");
+	std::cout << "Input value: "; // here
+	std::cin >> b;
 
 
 
