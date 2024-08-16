@@ -144,15 +144,15 @@ int main()
 	std::cin >> a;
 	std::cout << "Action ??? \n 1.Add \n 2.Substract" << std::endl;
 	std::cin >> acction;
-	std::cout << "acction char = " << acction << std::endl;
+	std::cout << "acction char = " << (int)acction << std::endl;
 	switch (acction) 
 	{
-	case(31):
+	case(49):
 		{
 		std::cout << "addition ON" << std::endl;
 		break;
 		}
-	case(32):
+	case(50):
 	{
 		std::cout << "Substraction ON" << std::endl;
 		break;
@@ -160,7 +160,7 @@ int main()
 	default:
 		std::cout << "wrong key" << std::endl;
 	}
-	system("cls");
+
 	std::cout << "Input value: "; // here
 	std::cin >> b;
 
