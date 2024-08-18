@@ -41,7 +41,51 @@ public:
 };
 
 
+void PrimitiveCalc()
+{
+	int a = 0,
+		b = 0, c = 0;
+	char acction = 'A';
 
+	std::cout << "CALCULATOR!!!" << std::endl;
+	std::cout << "Input value: "; // here
+	std::cin >> a;
+	std::cout << "Action ??? \n 1.Add \n 2.Substract" << std::endl;
+	std::cin >> acction;
+	std::cout << "acction char = " << (int)acction << std::endl;
+
+
+	std::cout << "Input value: "; // here
+	std::cin >> b;
+
+	std::cout << std::endl;
+	std::cout << "Value B is: " << b << std::endl;
+	// CONTROLS
+
+
+	switch (acction)
+	{
+	case(49):
+	{
+		std::cout << "addition ON" << std::endl;
+		c = a + b;
+		break;
+	}
+	case(50):
+	{
+		std::cout << "Substraction ON" << std::endl;
+		c = a - b;
+		break;
+	}
+	default:
+		std::cout << "wrong key" << std::endl;
+	}
+
+	std::cout << "Result is: " << c << std::endl;
+
+	// END CONTROLS
+
+}
 
 
 
@@ -80,7 +124,7 @@ void PrintINT(const int *a)
 };
 template <typename T>
 
-void PrintVector(std::vector <T> a) 
+void PrintVector(std::vector <T> &a) 
 {
 	for (auto var : a)
 	{
@@ -112,15 +156,13 @@ void AddValuesToVector(std::vector <int>& a, int input)
 std::vector<long long> pascalsTriangle(int input)
 {
 	std::vector <long long> result;
-	std::vector <long long> tempV;
 	int C = 1;
 	for (int i = 1; i <= input; ++i) {
 		C = 1;
 		for (int j = 1; j <= i; ++j) {
-			tempV.push_back(C);
+			result.push_back(C);
 			C = C * (i - j) / j;
 		}
-		result.insert(result.end(), tempV.begin(), tempV.end());
 	}
 	return result;
 }
@@ -134,48 +176,11 @@ int main()
 	PrintINT("pointer &test", &test);
 	PrintINT("pointer *testPT = &(test)", testPT);
 	*/
-
-	int a = 0,
-		b = 0, c = 0;
-	char acction = 'A';
-
-	std::cout << "CALCULATOR!!!" << std::endl;
-	std::cout << "Input value: "; // here
-	std::cin >> a;
-	std::cout << "Action ??? \n 1.Add \n 2.Substract" << std::endl;
-	std::cin >> acction;
-	std::cout << "acction char = " << (int)acction << std::endl;
 	
+	std::vector <long long> kaka;
+	kaka = pascalsTriangle(10);
+	PrintVector(kaka);
 
-	std::cout << "Input value: "; // here
-	std::cin >> b;
-	
-	std::cout << std::endl;
-	std::cout << "Value B is: " << b << std::endl;
-	// CONTROLS
-
-
-	switch (acction)
-	{
-	case(49):
-	{
-		std::cout << "addition ON" << std::endl;
-		c = a + b;
-		break;
-	}
-	case(50):
-	{
-		std::cout << "Substraction ON" << std::endl;
-		c = a - b;
-		break;
-	}
-	default:
-		std::cout << "wrong key" << std::endl;
-	}
-
-	std::cout << "Result is: " << c << std::endl;
-
-	// END CONTROLS
 
 
 	return 0;
