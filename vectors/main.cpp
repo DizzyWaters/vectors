@@ -88,6 +88,11 @@ void PrimitiveCalc()
 }
 
 
+std::vector<std::string> number(const std::vector<std::string>& lines)
+{
+
+	return {};
+}
 
 
 
@@ -177,11 +182,11 @@ int main()
 	PrintINT("pointer *testPT = &(test)", testPT);
 	*/
 	
-	std::vector <long long> kaka;
-	kaka = pascalsTriangle(10);
-	PrintVector(kaka);
+	std::vector<std::string> test = { "aa", "bb", "cc" };
+	PrintVector(test);
+	for (int i = 0; i < test.capacity(); i++) 
+	{
 
-
-
+	}
 	return 0;
 }
