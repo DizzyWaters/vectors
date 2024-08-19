@@ -88,15 +88,61 @@ void PrimitiveCalc()
 }
 
 
-std::vector<std::string> number(const std::vector<std::string>& lines)
+static std::vector<std::string> Kata1(const std::vector<std::string>& lines)
 {
 
-	return {};
+	std::vector<std::string> test = lines;
+
+	for (int i = 0; i < test.capacity(); i++)
+	{
+		int number = i + 1;
+		std::string tempSTR = std::to_string(number);
+		tempSTR.push_back(':'), tempSTR.push_back(' ');
+
+		// creat string with numbers 1: . 2: . 3. ...
+		// so ". + space" is always.
+		tempSTR += test.at(i);
+		test.at(i) = tempSTR;
+
+	}
+	return test;
 }
 
+static std::vector<std::string> Katta2(const std::vector<std::string>& input) {
+	
+	
+	
+	std::vector<std::string> result;
 
+	for (int i = 0; i < input.capacity(); ++i) 
+	{
+		if (input.at(i).size() == 4)
+		{
+			result.push_back(input.at(i));
+		}
 
+	}
+	return result;
+}
 
+std::string Kata3(std::string str) {
+	//your code here
+	for (int i = 0; i < str.size(); ++i)
+	{
+		if (str.at(i) == '5')
+		{
+			str.at(i) = 'S';
+		}
+		else if (str.at(i) == '0') {
+			str.at(i) == 'O';
+		}
+		else if (str.at(i) == '1') {
+			str.at(i) == 'I';
+		}
+
+	}
+	return str;
+}
 
 
 void PrintINT(std::string comment, int a) {
@@ -133,7 +179,7 @@ void PrintVector(std::vector <T> &a)
 {
 	for (auto var : a)
 	{
-		std::cout << var << " ";
+		std::cout << var << " " << std::endl;
 	}
 	std:: cout << " " << std::endl;
 	std::cout << "End of print..." << std::endl;
@@ -182,11 +228,15 @@ int main()
 	PrintINT("pointer *testPT = &(test)", testPT);
 	*/
 	
-	std::vector<std::string> test = { "aa", "bb", "cc" };
+	std::vector<std::string> test = { "B1ba", "B0ba", "Jax", "Pomni"};
 	PrintVector(test);
-	for (int i = 0; i < test.capacity(); i++) 
-	{
-
+	for (int i = 0; i < test.capacity(); ++i) {
+		test.at(i) = Kata3(test.at(i));
 	}
+	test = Katta2(test);
+	test = Kata1(test);
+	PrintVector(test);
+
+
 	return 0;
 }
