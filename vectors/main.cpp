@@ -2,6 +2,8 @@
 #include <vector>
 #include <string>
 #include <conio.h>
+#include <stack>
+
 
 // ----------------------------------------------------------------------
 // in
@@ -143,7 +145,30 @@ std::string Kata3(std::string str) {
 	}
 	return str;
 }
-
+bool validParentheses(const std::string& str) 
+{
+	bool result = true;
+	std::stack<char> STACK;
+	
+	for (char var : str)
+	{
+		if (var == '(') 
+		{
+			STACK.push(var);
+		}
+		else if (var == ')') {
+			if (STACK.empty())
+			{
+				return false;
+			}
+			STACK.pop();
+		}
+	}
+	if (STACK.empty()) {
+		result = true;
+	}
+	return result;
+}
 
 void PrintINT(std::string comment, int a) {
 
@@ -228,14 +253,10 @@ int main()
 	PrintINT("pointer *testPT = &(test)", testPT);
 	*/
 	
-	std::vector<std::string> test = { "B1ba", "B0ba", "Jax", "Pomni"};
-	PrintVector(test);
-	for (int i = 0; i < test.capacity(); ++i) {
-		test.at(i) = Kata3(test.at(i));
-	}
-	test = Katta2(test);
-	test = Kata1(test);
-	PrintVector(test);
+	std::string test = "()()(";
+
+	std::cout << std::boolalpha;
+	std::cout << validParentheses(test);
 
 
 	return 0;
