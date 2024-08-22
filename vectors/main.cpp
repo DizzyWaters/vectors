@@ -1,9 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <string>
-#include <conio.h>
-#include <stack>
-
+#include "Katas.h"
 
 // ----------------------------------------------------------------------
 // in
@@ -253,10 +248,7 @@ int main()
 	PrintINT("pointer *testPT = &(test)", testPT);
 	*/
 	
-	std::string test = "()()(";
-
-	std::cout << std::boolalpha;
-	std::cout << validParentheses(test);
+	KataTest();
 
 
 	return 0;
