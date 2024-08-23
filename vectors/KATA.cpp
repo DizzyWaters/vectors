@@ -9,13 +9,16 @@ void KataTest()
 	std::cout << "hello test!";
 }
 
-int get_sum(int a, int b)
+int KATA_get_sum(int a, int b)
 {
+    bool AmoreThenB = true;
     if (a == b)
         return a;
-    else
+
+    else if(a > b)
     {
-        return a + b;
+        AmoreThenB = true;
     }
+
     //Good luck!
 }

@@ -248,7 +248,7 @@ int main()
 	PrintINT("pointer *testPT = &(test)", testPT);
 	*/
 	
-	KataTest();
+	PrintINT(KATA_get_sum(1,2));
 
 
 	return 0;
