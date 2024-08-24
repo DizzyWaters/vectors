@@ -11,14 +11,28 @@ void KataTest()
 
 int KATA_get_sum(int a, int b)
 {
+    int result = 0;
     bool AmoreThenB = true;
     if (a == b)
         return a;
 
-    else if(a > b)
+    else if(a < b)
     {
-        AmoreThenB = true;
-    }
+        for (int i = a; i <= b; i++) 
+        {
+            result += i;
+        }
 
+    }
+    else
+    {
+        for (int i = b; i <= a; i++)
+        {
+            result += i;
+        }
+
+
+    }
+    return result;
     //Good luck!
 }

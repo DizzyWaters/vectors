@@ -248,7 +248,7 @@ int main()
 	PrintINT("pointer *testPT = &(test)", testPT);
 	*/
 	
-	PrintINT(KATA_get_sum(1,2));
+	PrintINT(KATA_get_sum(-998,999));
 
 
 	return 0;
