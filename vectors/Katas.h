@@ -8,6 +8,6 @@
 
 
 
-
+void ArrSort(int* input, int len);
 void KataTest();
 int KATA_get_sum(int a, int b);

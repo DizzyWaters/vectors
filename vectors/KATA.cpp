@@ -36,3 +36,12 @@ int KATA_get_sum(int a, int b)
     return result;
     //Good luck!
 }
+
+void ArrSort(int *input, int len) {
+
+    for (int i = 0; i < 5; ++i) {
+
+        input[i] = 1;
+    }
+
+}

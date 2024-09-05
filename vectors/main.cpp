@@ -248,8 +248,14 @@ int main()
 	PrintINT("pointer *testPT = &(test)", testPT);
 	*/
 	
-	PrintINT(KATA_get_sum(-998,999));
-
-
+	int a[5] = { 0,0,0,0,0 };
+	int length = sizeof(a) / sizeof(a[0]);
+	for (int i = 0; i < length; ++i) {
+	 std::cout << a[i] << "\t";
+	}
+	ArrSort(a, length);
+	for (int i = 0; i < length; ++i) {
+		std::cout << a[i] << "\t";
+	}
 	return 0;
 }
